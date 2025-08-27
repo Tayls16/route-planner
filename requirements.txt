@@ -1,0 +1,5 @@
+pyqt6
+requests
+ortools
+pandas
+openpyxl

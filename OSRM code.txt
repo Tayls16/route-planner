@@ -1,0 +1,12 @@
+OSRM code
+
+(open the file)
+cd C:\OSRM
+
+(download)
+docker run -t -v "%cd%":/data osrm/osrm-backend osrm-extract -p /opt/car.lua /data/australia-latest.osm.pbf
+docker run -t -v "%cd%":/data osrm/osrm-backend osrm-partition /data/australia-latest.osrm
+docker run -t -v "%cd%":/data osrm/osrm-backend osrm-customize /data/australia-latest.osrm
+
+(run)
+docker run -t -i -p 5000:5000 -v "%cd%":/data osrm/osrm-backend osrm-routed --algorithm mld /data/australia-latest.osrm
