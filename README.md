@@ -13,9 +13,5 @@ A desktop app that finds the best order to visit multiple stops using [OSRM](htt
 - Docker Desktop
 - OSRM map extract (e.g. [Geofabrik](https://download.geofabrik.de/))
 
-## Setup
-```bash
-git clone https://github.com/Tayls16/route-planner.git
-cd route-planner
-pip install -r requirements.txt
-python app.py
+
+
